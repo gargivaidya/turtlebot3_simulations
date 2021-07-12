@@ -1,13 +1,34 @@
 # TurtleBot3 with Intel RealSense D435
 <img src="https://github.com/ROBOTIS-GIT/emanual/blob/master/assets/images/platform/turtlebot3/logo_turtlebot3.png" width="300">
 
-## ROS 1 Packages for TurtleBot3 Simulations
-|develop|master|Kinetic + Ubuntu Xenial|Melodic + Ubuntu Bionic|Noetic + Ubuntu Focal|
-|:---:|:---:|:---:|:---:|:---:|
-|[![Build Status](https://travis-ci.com/ROBOTIS-GIT/turtlebot3_simulations.svg?branch=develop)](https://travis-ci.com/ROBOTIS-GIT/turtlebot3_simulations)|[![Build Status](https://travis-ci.com/ROBOTIS-GIT/turtlebot3_simulations.svg?branch=master)](https://travis-ci.com/ROBOTIS-GIT/turtlebot3_simulations)|[![Build Status](https://travis-ci.com/ROBOTIS-GIT/turtlebot3_simulations.svg?branch=kinetic-devel)](https://travis-ci.com/ROBOTIS-GIT/turtlebot3_simulations)|[![Build Status](https://travis-ci.com/ROBOTIS-GIT/turtlebot3_simulations.svg?branch=melodic-devel)](https://travis-ci.com/ROBOTIS-GIT/turtlebot3_simulations)|[![Build Status](https://travis-ci.com/ROBOTIS-GIT/turtlebot3_simulations.svg?branch=noetic-devel)](https://travis-ci.com/ROBOTIS-GIT/turtlebot3_simulations)|
-
 ## ROBOTIS e-Manual for TurtleBot3
 - [ROBOTIS e-Manual for TurtleBot3](http://turtlebot3.robotis.com/)
+- To install the Realsense Plugin from source follow steps from https://github.com/intel/gazebo-realsense, or as given below
+
+## RealSense Camera Gazebo Plugin
+- This Gazebo plugin simulates a RealSense camera by publishing the 4 main RealSense streams: Depth, Infrared, Infrared2 and Color. It is associated to a
+RealSense model that is providade in ./models
+
+# Requirements #
+    * Gazebo 8.0+
+
+# Build #
+
+1. Create a build folder under /src and make using CMAKE as follows:
+
+    ```
+    mkdir build
+    cd build
+    cmake ..
+    make
+    ```
+
+# Install #
+
+The plugin binaries will be installed so that Gazebo finds them. Also the
+needed models will be copied to the default gazebo models folder.
+
+    sudo make install
 
 ## Wiki for turtlebot3_simulations Packages
 - http://wiki.ros.org/turtlebot3_simulations (metapackage)
